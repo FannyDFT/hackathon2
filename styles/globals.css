@@ -9,3 +9,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.inputProfil {
+  @apply w-36 bg-grayColor p-1 rounded-lg;
+}

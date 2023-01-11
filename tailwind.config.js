@@ -2,10 +2,19 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Quicksand: ["Quicksand", "sans-serif"],
+      },
+      colors: {
+        blueColor: "#26498D",
+        grayColor: "#D9D9D9",
+        textGray: "#6F6C6C",
+      },
+    },
   },
   plugins: [],
 };

@@ -22,10 +22,14 @@ function myAccount({}: Props) {
           <div className="border border-1 border-blackColor py-4 px-10 rounded-lg">
             <p className="my-5">My informations:</p>
             <div className="space-y-6 mb-6">
-              <input type="text" placeholder="name" className="inputProfil" />
               <input
                 type="text"
-                placeholder="firstname"
+                placeholder="Lastname"
+                className="inputProfil"
+              />
+              <input
+                type="text"
+                placeholder="Firstname"
                 className="inputProfil"
               />
               <input

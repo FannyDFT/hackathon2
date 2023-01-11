@@ -8,7 +8,7 @@ const Navbar: FC<Props> = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div>
+    <div className="font-Quicksand">
       <div className="flex justify-between m-3">
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <FaBars size={30} />

@@ -5,6 +5,9 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      Quicksand: ["Quicksand", "sans-serif"],
+    },
     extend: {},
   },
   plugins: [],

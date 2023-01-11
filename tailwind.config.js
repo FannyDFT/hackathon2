@@ -2,13 +2,17 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    fontFamily: {
-      Quicksand: ["Quicksand", "sans-serif"],
+    extend: {
+      // fontFamily: {
+      //   Quicksand: ["Quicksand", "sans-serif"],
+      // },
+      // colors: {
+      //   blueColor: "#26498D",
+      // },
     },
-    extend: {},
   },
   plugins: [],
 };

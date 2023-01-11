@@ -1,4 +1,5 @@
 import { Inter } from "@next/font/google";
+import BookingForm from "../src/components/BookingForm";
 import CardCar from "../src/components/CardCar";
 import FindACar from "../src/components/FindACar";
 import LogIn from "../src/components/LogIn";
@@ -14,6 +15,7 @@ export default function Home() {
       <FindACar />
       <CardCar />
       <LogIn />
+      <BookingForm />
     </div>
   );
 }

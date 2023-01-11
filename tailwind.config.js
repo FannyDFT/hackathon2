@@ -6,12 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   Quicksand: ["Quicksand", "sans-serif"],
-      // },
-      // colors: {
-      //   blueColor: "#26498D",
-      // },
+      fontFamily: {
+        Quicksand: ["Quicksand", "sans-serif"],
+      },
+      colors: {
+        blueColor: "#26498D",
+      },
     },
   },
   plugins: [],

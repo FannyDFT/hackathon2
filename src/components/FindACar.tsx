@@ -24,10 +24,12 @@ export default function FindACar() {
         <div className="flex flex-col font-bold">
           <div>Date of departure</div>
           <input type="date" />
+          <input type="time" />
         </div>
         <div className="flex flex-col font-bold">
           <div>Return date</div>
           <input type="date" />
+          <input type="time" />
         </div>
       </div>
       <div className="flex justify-center pb-4">

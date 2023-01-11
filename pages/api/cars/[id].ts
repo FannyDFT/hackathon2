@@ -20,9 +20,11 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
         data: {
           brand: req.body.brand,
           model: req.body.model,
+          avatarUrl: req.body.avatarUrl,
           color: req.body.color,
           name: req.body.name,
           fuel: req.body.fuel,
+          clutch: req.body.clutch,
           year: req.body.year,
           plate: req.body.plate,
           seats: req.body.seats,

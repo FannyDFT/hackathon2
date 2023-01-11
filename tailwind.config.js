@@ -5,7 +5,14 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        Quicksand: ["Quicksand", "sans-serif"],
+      },
+      colors: {
+        blueColor: "#26498D",
+      },
+    },
   },
   plugins: [],
 };

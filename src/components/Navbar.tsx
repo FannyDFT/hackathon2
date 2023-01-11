@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React, { FC, useState } from "react";
 import { FaBars, FaUser } from "react-icons/fa";
+import Link from "next/link";
 
 interface Props {}
 
@@ -14,13 +15,15 @@ const Navbar: FC<Props> = () => {
           <FaBars size={30} />
         </div>
         <div className="flex">
-          <Image
-            src="/assets/logo_fleetgo.png"
-            width={40}
-            height={10}
-            quality={100}
-            alt="logo"
-          />
+          <Link href="/">
+            <Image
+              src="/assets/logo_fleetgo.png"
+              width={40}
+              height={10}
+              quality={100}
+              alt="logo"
+            />
+          </Link>
           <div className="text-blueColor text-3xl">FleetGo</div>
         </div>
         <div className="">
@@ -28,11 +31,13 @@ const Navbar: FC<Props> = () => {
         </div>
       </div>
       {isMenuOpen && (
-        <ul>
-          <li>Mon compte</li>
-          <li>Nos modèles</li>
-          <li>Aide & Contact</li>
-        </ul>
+        <nav>
+          <Link href="/myAccount">Mon compte</Link>
+
+          <Link href="/ourCars">Nos modèles</Link>
+
+          <Link href="/contactHelp">Aide & Contact</Link>
+        </nav>
       )}
     </div>
   );

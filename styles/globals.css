@@ -9,3 +9,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.inputForm {
+  @apply bg-grayColor rounded-lg p-1 text-textGray border-none;
+}
+
+.button {
+  @apply bg-blueColor text-white px-10 py-4 rounded-lg;
+}
+
+.pText {
+  @apply font-semibold;
+}
+
+.labelText {
+  @apply font-semibold;
+}

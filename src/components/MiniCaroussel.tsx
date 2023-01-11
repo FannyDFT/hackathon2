@@ -15,7 +15,7 @@ function MiniCaroussel({}: Props) {
         <hr className="border-1 border-black" />
       </div>
 
-      <div className="w-auto h-auto">
+      <div className="w-auto h-64">
         <Carousel
           infiniteLoop
           autoPlay
@@ -37,13 +37,31 @@ function MiniCaroussel({}: Props) {
           }}
         >
           <div>
-            <Image src="/assets/bmw.png" width={50} height={50} alt="bmw" />
+            <Image
+              src="/assets/bmw.png"
+              width={50}
+              height={50}
+              alt="bmw"
+              className="pb-10"
+            />
           </div>
           <div>
-            <Image src="/assets/peugeot.png" width={50} height={50} alt="bmw" />
+            <Image
+              src="/assets/peugeot.png"
+              width={50}
+              height={50}
+              alt="bmw"
+              className="pb-10"
+            />
           </div>
           <div>
-            <Image src="/assets/porshe.png" width={50} height={50} alt="bmw" />
+            <Image
+              src="/assets/porshe.png"
+              width={50}
+              height={50}
+              alt="bmw"
+              className="pb-10"
+            />
           </div>
         </Carousel>
       </div>

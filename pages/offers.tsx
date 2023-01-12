@@ -1,12 +1,8 @@
 import React from "react";
-import CardCar from "../src/components/CardCar";
+import CardList from "../src/components/CardList";
 
 function offers() {
-  return (
-    <div className="bg-blueColor flex flex-col items-center py-2 h-screen">
-      <CardCar />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default offers;

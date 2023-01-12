@@ -36,7 +36,7 @@ const Navbar: FC<Props> = () => {
         <nav>
           <Link href="/myAccount">My account</Link>
 
-          <Link href="/cars/ours">Our cars</Link>
+          <Link href="/ourscars">Our cars</Link>
 
           <Link href="/contactHelp">Help & Contact</Link>
         </nav>

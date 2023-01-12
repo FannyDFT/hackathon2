@@ -6,7 +6,6 @@ function BookingForm() {
   return (
     <div className="h-screen bg-blueColor font-Quicksand">
       <div className="flex justify-center items-center h-screen">
-        {" "}
         <div className="flex flex-col m-8 p-5 space-y-5 border rounded-xl bg-white h-5/6">
           <div className="flex justify-center">
             <Image

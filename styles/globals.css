@@ -29,3 +29,11 @@
 .labelText {
   @apply font-semibold;
 }
+
+.admininput {
+  @apply border border-black w-2/3 h-9 rounded-md p-2;
+}
+
+.labeladmin {
+  @apply flex flex-col;
+}

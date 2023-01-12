@@ -2,6 +2,7 @@ import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
 
 export default function AddNewCar() {
+  const [file, setFile] = useState<File | null>(null);
   const [carsData, setCarsData] = useState({
     brand: "",
     model: "",
@@ -15,6 +16,7 @@ export default function AddNewCar() {
     kilometers: 0,
     fuel: "",
     plate: "",
+    avatarUrl: "",
   });
 
   const clutchChoice = ["MANUAL", "AUTOMATIC"];
@@ -29,7 +31,15 @@ export default function AddNewCar() {
   ];
 
   const handleSubmit = () => {
-    axios.post("http://localhost:3000/api/cars", carsData);
+    const formData = new FormData();
+
+    formData.append("files", file as File);
+
+    for (const key in carsData) {
+      formData.append(key, carsData[key as keyof typeof carsData].toString());
+    }
+
+    axios.post("http://localhost:3000/api/cars", formData);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -79,6 +89,7 @@ export default function AddNewCar() {
               name="clutch"
               id={carsData.clutch}
             >
+              <option value="">---</option>
               {clutchChoice.map((clutch) => (
                 <option key={clutch} value={clutch}>
                   {clutch}
@@ -99,6 +110,7 @@ export default function AddNewCar() {
               name="clutch"
               id={carsData.clutch}
             >
+              <option value="">---</option>
               {typeChoice.map((type) => (
                 <option key={type} value={type}>
                   {type}
@@ -190,7 +202,13 @@ export default function AddNewCar() {
 
         <div className="mr-20">
           <label htmlFor="pics" className="flex flex-col mb-40 mt-5">
-            <input className="bg-blue-300" type="file" />
+            <input
+              className="bg-blue-300"
+              type="file"
+              name="avatarUrl"
+              value={carsData.avatarUrl}
+              onChange={(e) => setFile(e.target.files![0])}
+            />
             Pics car
           </label>
           <label className="labeladmin" htmlFor="Description">

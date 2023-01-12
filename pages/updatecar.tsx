@@ -15,9 +15,10 @@ export default function UpdateCar() {
     kilometers: "",
     fuel: "",
     plate: "",
+    avatarUrl: "",
   });
 
-  const fakeCarId = "22499a87-e9bc-4fb4-958f-69dec7f961cc";
+  const fakeCarId = "e746c74a-05da-47f2-a706-6e56cb60f78d";
 
   const getOneCar = async () => {
     const { data } = await axios.get(
@@ -175,7 +176,11 @@ export default function UpdateCar() {
         </div>
         <div className="mr-20">
           <label htmlFor="pics" className="flex flex-col mb-40 mt-5">
-            <input className="bg-blue-300" type="file" />
+            <input
+              className="bg-blue-300"
+              type="file"
+              value={carsData.avatarUrl}
+            />
             Pics car
           </label>
           <label className="labeladmin" htmlFor="Description">

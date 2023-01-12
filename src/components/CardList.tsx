@@ -11,7 +11,9 @@ function CardList({}: Props) {
   const [selectedBrand, setSelectedBrand] = useState<string>("");
 
   const getAllCars = async () => {
-    const { data } = await axios.get("http://localhost:3000/api/cars");
+    const { data } = await axios.get(
+      `${process.env.NEXT_PUBLIC_SERVER_URL}/cars`
+    );
     setCars(data);
   };
 

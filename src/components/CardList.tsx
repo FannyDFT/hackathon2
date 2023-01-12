@@ -2,6 +2,7 @@ import { Car } from "@prisma/client";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CardCar from "./CardCar";
+import FilterCars from "./FilterCars";
 
 type Props = {};
 
@@ -19,7 +20,11 @@ function CardList({}: Props) {
 
   return (
     <div className="h-5/6 bg-blueColor font-Quicksand font-semibold overflow-y-scroll">
-      <h1 className="text-white text-xl p-8">Our Vehicles: {cars.length}</h1>
+      <div className="flex justify-center items-center">
+        <h1 className="text-white text-xl p-8">Our Vehicles: {cars.length}</h1>
+        <FilterCars />
+      </div>
+
       <div className="font-Quicksand font-bold">
         {cars.map((model) => (
           <CardCar key={model.id} car={model} />

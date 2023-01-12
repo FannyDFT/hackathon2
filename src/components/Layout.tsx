@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 type DashBoardLayoutProps = {
@@ -9,6 +10,7 @@ export default function Layout({ children }: DashBoardLayoutProps) {
     <div>
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </div>
   );
 }

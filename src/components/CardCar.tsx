@@ -10,15 +10,21 @@ function CardCar({ car }: Props) {
     <div className="flex justify-between items-center align-middle h-[182px] bg-white m-5 rounded-lg p-4 font-bold">
       <div className="space-y-5">
         <h2>
-          {car.brand}
+          {car.brand} {car.model}
           <br />
           or similar
         </h2>
         <p className="text-blueColor">{car.price} € /day</p>
       </div>
 
-      <Link className="w-[200px] relative h-[150px]" href="/detailscars">
-        <Image fill src="/pictures/peugeot.png" alt="car" />
+      <Link href="/detailscars" className="lg:w-4/6">
+        <Image
+          src={car.avatarUrl}
+          alt="car"
+          width={250}
+          height={250}
+          quality={100}
+        />
       </Link>
     </div>
   );

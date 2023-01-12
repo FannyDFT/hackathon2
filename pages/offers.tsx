@@ -1,8 +1,12 @@
 import React from "react";
 import CardList from "../src/components/CardList";
 
-function offers() {
-  return <div></div>;
+function Offers() {
+  return (
+    <div>
+      <CardList />
+    </div>
+  );
 }
 
-export default offers;
+export default Offers;

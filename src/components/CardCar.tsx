@@ -3,7 +3,7 @@ import React from "react";
 
 function CardCar() {
   return (
-    <div className="flex justify-around border w-5/6 items-center rounded-lg">
+    <div className="flex justify-start p-2 bg-white w-5/6 rounded-lg">
       <Link href="/detailscars">
         <div className="flex flex-col">
           <div className="text-xl font-bold">car model</div>

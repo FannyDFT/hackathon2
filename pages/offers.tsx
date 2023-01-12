@@ -3,7 +3,7 @@ import CardCar from "../src/components/CardCar";
 
 function offers() {
   return (
-    <div className="bg-blueColor flex flex-col items-center justify-center py-2">
+    <div className="bg-blueColor flex flex-col items-center py-2 h-screen">
       <CardCar />
     </div>
   );

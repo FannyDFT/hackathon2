@@ -7,12 +7,12 @@ export default function UpdateCar() {
     model: "",
     name: "",
     clutch: "",
-    year: "",
-    seats: "",
-    doors: "",
+    year: 0,
+    seats: 0,
+    doors: 0,
     color: "",
-    price: "",
-    kilometers: "",
+    price: 0,
+    kilometers: 0,
     fuel: "",
     plate: "",
     avatarUrl: "",
@@ -34,12 +34,12 @@ export default function UpdateCar() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCarsData((state) => ({
       ...state,
-      [e.target.value]: e.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
-  const handleUpdate = () => {
-    axios.put(`http://localhost:3000/api/cars/${fakeCarId}`, carsData);
+  const handleUpdate = async () => {
+    await axios.put(`http://localhost:3000/api/cars/${fakeCarId}`, carsData);
   };
 
   const handlDelete = () => {
@@ -180,6 +180,7 @@ export default function UpdateCar() {
               className="bg-blue-300"
               type="file"
               value={carsData.avatarUrl}
+              onChange={handleChange}
             />
             Pics car
           </label>

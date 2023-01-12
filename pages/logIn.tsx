@@ -21,7 +21,7 @@ function LogIn({}: Props) {
 
   return (
     <div className="h-screen bg-blueColor font-Quicksand flex flex-col items-center">
-      <div className="bg-white rounded-xl flex flex-col w-4/5 mt-14 ">
+      <div className="bg-white rounded-xl flex flex-col w-4/5 mt-14 lg:w-2/5">
         <div className="flex justify-center mt-16 pb-8 text-xl font-bold">
           Log in
         </div>

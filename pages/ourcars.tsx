@@ -25,7 +25,7 @@ function OursCars({ cars }: Props) {
           />
         </div>
 
-        <div className="font-Quicksand font-bold">
+        <div className="font-Quicksand font-bold  lg:grid lg:grid-cols-3">
           {cars
             .filter((car) => {
               return selectedBrand !== "" ? car.brand === selectedBrand : true;

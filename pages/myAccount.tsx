@@ -13,7 +13,7 @@ function myAccount({}: Props) {
         alt="avatar"
         className="rounded-full m-6"
       />
-      <div className="flex flex-col items-center bg-white rounded-lg h-2/3 w-4/5 font-semibold font-Quicksand text-blackColor">
+      <div className="flex flex-col items-center bg-white rounded-lg h-2/3 w-4/5 font-semibold font-Quicksand text-blackColor  lg:w-2/5">
         <h1 className="m-10">My account</h1>
         <div className="space-y-4 w-4/5">
           <p className="border border-1 border-blackColor py-4 px-10 rounded-lg bg-blueColor text-white">

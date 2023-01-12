@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 function BookingForm() {
@@ -31,12 +32,14 @@ function BookingForm() {
       </div>
       <div className="text-xs">payment details</div>
       <div className="flex justify-center">
-        <button
-          type="button"
-          className="bg-blueColor rounded-lg text-base text-white flex items-center px-8 py-2"
-        >
-          Booking
-        </button>
+        <Link href="/payment">
+          <button
+            type="button"
+            className="bg-blueColor rounded-lg text-base text-white flex items-center px-8 py-2"
+          >
+            Booking
+          </button>
+        </Link>
       </div>
     </div>
   );

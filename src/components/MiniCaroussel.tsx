@@ -7,7 +7,7 @@ type Props = {};
 
 function MiniCaroussel({}: Props) {
   return (
-    <div className=" flex flex-col items-center mt-12 bg-white w-full">
+    <div className="flex flex-col items-center mt-12 bg-white w-full">
       <div>
         <h1 className="font-Quicksand font-semibold text-lg my-4">
           Discover our vehicles
@@ -15,7 +15,7 @@ function MiniCaroussel({}: Props) {
         <hr className="border-1 border-black" />
       </div>
 
-      <div className="w-auto h-64">
+      <div className="w-auto h-64 lg:h-auto lg:w-1/5">
         <Carousel
           infiniteLoop
           autoPlay
@@ -38,28 +38,31 @@ function MiniCaroussel({}: Props) {
         >
           <div>
             <Image
-              src="/assets/bmw.png"
-              width={50}
-              height={50}
-              alt="bmw"
+              src="/assets/fiat.png"
+              width={1000}
+              height={1000}
+              quality={100}
+              alt="fiat"
               className="pb-10"
             />
           </div>
           <div>
             <Image
               src="/assets/peugeot.png"
-              width={50}
-              height={50}
-              alt="bmw"
+              width={1000}
+              height={1000}
+              quality={100}
+              alt="peugeot"
               className="pb-10"
             />
           </div>
           <div>
             <Image
-              src="/assets/porshe.png"
-              width={50}
-              height={50}
-              alt="bmw"
+              src="/assets/range.png"
+              width={1000}
+              height={1000}
+              quality={100}
+              alt="range"
               className="pb-10"
             />
           </div>

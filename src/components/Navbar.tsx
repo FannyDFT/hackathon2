@@ -11,12 +11,35 @@ const Navbar: FC<Props> = () => {
 
   return (
     <div className="font-Quicksand">
-      <div className="flex justify-between m-3">
+      <div className="hidden lg:flex lg:items-center lg:justify-between lg:px-8">
+        <Link href="/" className="flex">
+          <Image
+            src="/assets/logo_fleetgo.png"
+            width={40}
+            height={10}
+            quality={100}
+            alt="logo"
+          />
+          <div className="text-blueColor text-3xl">FleetGo</div>
+        </Link>
+        <div className="flex space-x-8">
+          <Link href="logIn" className="text-blueColor text-xl">
+            My account
+          </Link>
+          <Link href="/ourcars" className="text-blueColor text-xl">
+            Our cars
+          </Link>
+          <Link href="/contactHelp" className="text-blueColor text-xl">
+            Help & contact
+          </Link>
+        </div>
+      </div>
+      <div className="flex justify-between m-3 lg:hidden">
         <div onClick={() => setIsMenuOpen(!isMenuOpen)}>
           <FaBars size={30} />
         </div>
-        <div className="flex">
-          <Link href="/">
+        <div>
+          <Link href="/" className="flex">
             <Image
               src="/assets/logo_fleetgo.png"
               width={40}
@@ -24,8 +47,8 @@ const Navbar: FC<Props> = () => {
               quality={100}
               alt="logo"
             />
+            <div className="text-blueColor text-3xl">FleetGo</div>
           </Link>
-          <div className="text-blueColor text-3xl">FleetGo</div>
         </div>
         <Link href="/logIn">
           <div className="">

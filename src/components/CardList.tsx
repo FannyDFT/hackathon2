@@ -18,7 +18,7 @@ function CardList({}: Props) {
   }, []);
 
   return (
-    <div className="h-4/5 bg-blueColor font-Quicksand font-semibold overflow-y-scroll">
+    <div className="h-5/6 bg-blueColor font-Quicksand font-semibold overflow-y-scroll">
       <h1 className="text-white text-xl p-8">Our Vehicles: {cars.length}</h1>
       <div className="font-Quicksand font-bold">
         {cars.map((model) => (

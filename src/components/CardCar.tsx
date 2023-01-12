@@ -9,12 +9,12 @@ function CardCar({ car }: Props) {
   return (
     <div className="flex justify-around bg-white m-5 rounded-lg p-4 font-bold">
       <div className="space-y-5">
-        <h2 className="">
+        <h2>
           {car.name}
           <br />
           or similar
         </h2>
-        <p>{car.price} € /day</p>
+        <p className="text-blueColor">{car.price} € /day</p>
       </div>
       <div>
         <Link href="/detailscars">

@@ -3,13 +3,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CardCar from "./CardCar";
 import FilterCars from "./FilterCars";
-import FilterCars from "./FilterCars";
 
 type Props = {};
 
 function CardList({}: Props) {
   const [cars, setCars] = useState<Car[]>([]);
-  const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
+  const [selectedBrand, setSelectedBrand] = useState<string>("");
 
   const getAllCars = async () => {
     const { data } = await axios.get("http://localhost:3000/api/cars");

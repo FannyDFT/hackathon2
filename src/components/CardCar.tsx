@@ -10,7 +10,7 @@ function CardCar({ car }: Props) {
     <div className="flex justify-around bg-white m-5 rounded-lg p-4 font-bold">
       <div className="space-y-5">
         <h2>
-          {car.name}
+          {car.brand}
           <br />
           or similar
         </h2>

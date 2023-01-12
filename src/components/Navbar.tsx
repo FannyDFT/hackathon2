@@ -34,6 +34,7 @@ const Navbar: FC<Props> = () => {
         </Link>
       </div>
       {isMenuOpen && (
+
         <Menu
           className="bg-white text-lg text-blueColor font-bold p-8"
           width={200}
@@ -67,6 +68,7 @@ const Navbar: FC<Props> = () => {
             Help & Contact
           </Link>
         </Menu>
+
       )}
     </div>
   );

@@ -12,7 +12,7 @@ function CardCar({ car }: Props) {
         <h2>
           {car.brand} {car.model}
           <br />
-          or similar
+          {car.model}
         </h2>
         <p className="text-blueColor">{car.price} € /day</p>
       </div>

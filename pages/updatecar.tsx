@@ -3,18 +3,18 @@ import { ChangeEvent, useEffect, useState } from "react";
 
 export default function UpdateCar() {
   const [carsData, setCarsData] = useState({
-    Brand: "",
-    Model: "",
-    Type: "",
-    Clutch: "",
-    Year: "",
-    Seats: "",
-    Doors: "",
-    Color: "",
-    Price: "",
-    Kilometers: "",
-    Fuel: "",
-    Plate: "",
+    brand: "",
+    model: "",
+    name: "",
+    clutch: "",
+    year: "",
+    seats: "",
+    doors: "",
+    color: "",
+    price: "",
+    kilometers: "",
+    fuel: "",
+    plate: "",
   });
 
   const fakeCarId = "22499a87-e9bc-4fb4-958f-69dec7f961cc";
@@ -55,133 +55,121 @@ export default function UpdateCar() {
           <label className="labeladmin" htmlFor="Brand">
             Brand
             <input
-              name="Brand"
-              value={carsData.Brand}
+              name="brand"
+              value={carsData.brand}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Model">
             Model
             <input
-              name="Model"
-              value={carsData.Model}
+              name="model"
+              value={carsData.model}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Clutch">
             Clutch
             <input
-              name="Clutch"
-              value={carsData.Clutch}
+              name="clutch"
+              value={carsData.clutch}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Type">
             Type
             <input
-              name="Type"
-              value={carsData.Type}
+              name="name"
+              value={carsData.name}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Year">
             Year
             <input
-              name="Year"
-              value={carsData.Year}
+              name="year"
+              value={carsData.year}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Seats">
             Seats
             <input
-              name="Seats"
-              value={carsData.Seats}
+              name="seats"
+              value={carsData.seats}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Doors">
             Doors
             <input
-              name="Doors"
-              value={carsData.Doors}
+              name="doors"
+              value={carsData.doors}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Color">
             Color
             <input
-              name="Color"
-              value={carsData.Color}
+              name="color"
+              value={carsData.color}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Price">
             Price
             <input
-              name="Price"
-              value={carsData.Price}
+              name="price"
+              value={carsData.price}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Kilometers">
             Kilometers
             <input
-              name="Kilometers"
-              value={carsData.Kilometers}
+              name="kilometers"
+              value={carsData.kilometers}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Fuel">
             Fuel
             <input
-              name="Fuel"
-              value={carsData.Fuel}
+              name="fuel"
+              value={carsData.fuel}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
           <label className="labeladmin" htmlFor="Plate">
             Plate
             <input
-              name="Plate"
-              value={carsData.Plate}
+              name="plate"
+              value={carsData.plate}
               onChange={handleChange}
               className="admininput"
               type="text"
-              required
             />
           </label>
         </div>

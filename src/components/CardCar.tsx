@@ -17,14 +17,8 @@ function CardCar({ car }: Props) {
         <p className="text-blueColor">{car.price} € /day</p>
       </div>
 
-      <Link href="/detailscars" className="lg:w-4/6">
-        <Image
-          src={car.avatarUrl}
-          alt="car"
-          width={250}
-          height={250}
-          quality={100}
-        />
+      <Link className="w-[200px] relative h-[150px]" href={`/cars/${car.id}`}>
+        <Image fill src={car.avatarUrl} alt="car" />
       </Link>
     </div>
   );

@@ -1,5 +1,4 @@
 import { Car } from "@prisma/client";
-import axios from "axios";
 import React, { ChangeEvent, useEffect, useState } from "react";
 
 type Props = {

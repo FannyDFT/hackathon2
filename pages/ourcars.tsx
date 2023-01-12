@@ -1,5 +1,4 @@
 import { Car } from "@prisma/client";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
 import CardCar from "../src/components/CardCar";
 import CardList from "../src/components/CardList";

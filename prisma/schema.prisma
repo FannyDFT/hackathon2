@@ -38,10 +38,9 @@ model User {
   firstName    String?
   lastName     String?
   phone        String?
-  birthDate    String
-  cardNumber   Int
+  birthDate    String?
   role         RoleName      @default(CLIENT)
-  licence      String
+  licence      String?
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
   reservations Reservation[]

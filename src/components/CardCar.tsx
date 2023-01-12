@@ -7,25 +7,19 @@ type Props = { car: Car };
 
 function CardCar({ car }: Props) {
   return (
-    <div className="flex justify-around bg-white m-5 rounded-lg p-4 font-bold">
+    <div className="flex justify-between items-center align-middle h-[182px] bg-white m-5 rounded-lg p-4 font-bold">
       <div className="space-y-5">
         <h2>
-          {car.brand}
+          {car.brand} {car.model}
           <br />
-          or similar
+          {car.model}
         </h2>
         <p className="text-blueColor">{car.price} € /day</p>
       </div>
-      <div>
-        <Link href="/detailscars">
-          <Image
-            src="/pictures/peugeot.png"
-            width={150}
-            height={150}
-            alt="car"
-          />
-        </Link>
-      </div>
+
+      <Link className="w-[200px] relative h-[150px]" href={`/cars/${car.id}`}>
+        <Image fill src={car.avatarUrl} alt="car" />
+      </Link>
     </div>
   );
 }

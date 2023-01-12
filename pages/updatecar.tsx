@@ -1,5 +1,5 @@
-import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
+import axiosInstance from "../src/utils/axiosInstance";
 
 export default function UpdateCar() {
   const [carsData, setCarsData] = useState({
@@ -21,9 +21,7 @@ export default function UpdateCar() {
   const fakeCarId = "e746c74a-05da-47f2-a706-6e56cb60f78d";
 
   const getOneCar = async () => {
-    const { data } = await axios.get(
-      `http://localhost:3000/api/cars/${fakeCarId}`
-    );
+    const { data } = await axiosInstance.get(`/cars/${fakeCarId}`);
     setCarsData(data);
   };
 
@@ -43,7 +41,7 @@ export default function UpdateCar() {
   };
 
   const handlDelete = () => {
-    axios.delete(`http://localhost:3000/api/cars/${fakeCarId}`);
+    axiosInstance.delete(`http://localhost:3000/api/cars/${fakeCarId}`);
   };
 
   return (

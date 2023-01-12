@@ -7,17 +7,18 @@ export default function UpdateCar() {
     model: "",
     name: "",
     clutch: "",
-    year: "",
-    seats: "",
-    doors: "",
+    year: 0,
+    seats: 0,
+    doors: 0,
     color: "",
-    price: "",
-    kilometers: "",
+    price: 0,
+    kilometers: 0,
     fuel: "",
     plate: "",
+    avatarUrl: "",
   });
 
-  const fakeCarId = "22499a87-e9bc-4fb4-958f-69dec7f961cc";
+  const fakeCarId = "e746c74a-05da-47f2-a706-6e56cb60f78d";
 
   const getOneCar = async () => {
     const { data } = await axiosInstance.get(`/cars/${fakeCarId}`);
@@ -31,12 +32,12 @@ export default function UpdateCar() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setCarsData((state) => ({
       ...state,
-      [e.target.value]: e.target.value,
+      [e.target.name]: e.target.value,
     }));
   };
 
-  const handleUpdate = () => {
-    axiosInstance.put(`http://localhost:3000/api/cars/${fakeCarId}`, carsData);
+  const handleUpdate = async () => {
+    await axios.put(`http://localhost:3000/api/cars/${fakeCarId}`, carsData);
   };
 
   const handlDelete = () => {
@@ -173,7 +174,12 @@ export default function UpdateCar() {
         </div>
         <div className="mr-20">
           <label htmlFor="pics" className="flex flex-col mb-40 mt-5">
-            <input className="bg-blue-300" type="file" />
+            <input
+              className="bg-blue-300"
+              type="file"
+              value={carsData.avatarUrl}
+              onChange={handleChange}
+            />
             Pics car
           </label>
           <label className="labeladmin" htmlFor="Description">

@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 function BookingForm() {
   return (
@@ -39,12 +40,14 @@ function BookingForm() {
         </div>
         <div className="text-xs">payment details</div>
         <div className="flex justify-center">
-          <button
-            type="button"
-            className="bg-blueColor rounded-lg text-base text-white flex items-center px-8 py-2"
-          >
-            Booking
-          </button>
+          <Link href="/payment">
+            <button
+              type="button"
+              className="bg-blueColor rounded-lg text-base text-white flex items-center px-8 py-2"
+            >
+              Booking
+            </button>
+          </Link>
         </div>
       </div>
     </div>

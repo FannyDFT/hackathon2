@@ -26,9 +26,11 @@ const Navbar: FC<Props> = () => {
           </Link>
           <div className="text-blueColor text-3xl">FleetGo</div>
         </div>
-        <div className="">
-          <FaUser size={30} />
-        </div>
+        <Link href="/logIn">
+          <div className="">
+            <FaUser size={30} />
+          </div>
+        </Link>
       </div>
       {isMenuOpen && (
         <nav>

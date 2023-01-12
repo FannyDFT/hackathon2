@@ -1,7 +1,6 @@
 import { Car } from "@prisma/client";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CardCar from "../src/components/CardCar";
-import CardList from "../src/components/CardList";
 import FilterCars from "../src/components/FilterCars";
 import prisma from "../prisma/client";
 

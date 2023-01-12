@@ -14,9 +14,11 @@ model Car {
   id           String        @id @default(uuid())
   brand        String
   model        String
+  avatarUrl    String
   color        String
-  name         TypeName     
+  name         TypeName
   fuel         String
+  clutch       TypeClutch
   year         Int
   plate        String
   seats        Int
@@ -38,6 +40,7 @@ model User {
   phone        String?
   birthDate    String
   cardNumber   Int
+  role         RoleName      @default(CLIENT)
   licence      String
   createdAt    DateTime      @default(now())
   updatedAt    DateTime      @updatedAt
@@ -63,4 +66,14 @@ enum TypeName {
   VAN
   CONVERTIBLE
   SUPER_CAR
+}
+
+enum TypeClutch {
+  MANUAL
+  AUTOMATIC
+}
+
+enum RoleName {
+  CLIENT
+  ADMIN
 }

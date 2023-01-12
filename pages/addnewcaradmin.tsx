@@ -1,19 +1,32 @@
+import axios from "axios";
+import { ChangeEvent, useState } from "react";
+
 export default function AddNewCar() {
-  const fakeCars = [
-    {
-      Brand: "peugeot",
-      Model: "208",
-      Type: "city",
-      Year: "2020",
-      Seats: "5",
-      Doors: "5",
-      Color: "black",
-      Price: "30E",
-      Kilometers: "10000",
-      Fuel: "essence",
-      Plate: "bx-765-gt",
-    },
-  ];
+  const [carsData, setCarsData] = useState({
+    Brand: "",
+    Model: "",
+    Type: "",
+    Clutch: "",
+    Year: "",
+    Seats: "",
+    Doors: "",
+    Color: "",
+    Price: "",
+    Kilometers: "",
+    Fuel: "",
+    Plate: "",
+  });
+
+  const handleSubmit = () => {
+    axios.post("http://localhost:3000/api/cars", carsData);
+  };
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setCarsData((state) => ({
+      ...state,
+      [e.target.name]: e.target.value,
+    }));
+  };
 
   return (
     <div className="flex flex-col m-3">
@@ -24,51 +37,135 @@ export default function AddNewCar() {
         <div className="flex flex-col gap-4 ml-20">
           <label className="labeladmin" htmlFor="Brand">
             Brand
-            <input className="admininput" type="text" />
+            <input
+              name="Brand"
+              value={carsData.Brand}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Model">
             Model
-            <input className="admininput" type="text" />
+            <input
+              name="Model"
+              value={carsData.Model}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Clutch">
             Clutch
-            <input className="admininput" type="text" />
+            <input
+              name="Clutch"
+              value={carsData.Clutch}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Type">
             Type
-            <input className="admininput" type="text" />
+            <input
+              name="Type"
+              value={carsData.Type}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Year">
             Year
-            <input className="admininput" type="text" />
+            <input
+              name="Year"
+              value={carsData.Year}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Seats">
             Seats
-            <input className="admininput" type="text" />
+            <input
+              name="Seats"
+              value={carsData.Seats}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Doors">
             Doors
-            <input className="admininput" type="text" />
+            <input
+              name="Doors"
+              value={carsData.Doors}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Color">
             Color
-            <input className="admininput" type="text" />
+            <input
+              name="Color"
+              value={carsData.Color}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Price">
             Price
-            <input className="admininput" type="text" />
+            <input
+              name="Price"
+              value={carsData.Price}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Kilometers">
             Kilometers
-            <input className="admininput" type="text" />
+            <input
+              name="Kilometers"
+              value={carsData.Kilometers}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Fuel">
             Fuel
-            <input className="admininput" type="text" />
+            <input
+              name="Fuel"
+              value={carsData.Fuel}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
           <label className="labeladmin" htmlFor="Plate">
             Plate
-            <input className="admininput" type="text" />
+            <input
+              name="Plate"
+              value={carsData.Plate}
+              onChange={handleChange}
+              className="admininput"
+              type="text"
+              required
+            />
           </label>
         </div>
         <div className="mr-20">
@@ -85,6 +182,7 @@ export default function AddNewCar() {
 
       <div className="place-self-center mb-20 mt-20">
         <button
+          onClick={handleSubmit}
           type="button"
           className="border border-black bg-blue-700 text-white h-10 w-48 rounded-lg"
         >

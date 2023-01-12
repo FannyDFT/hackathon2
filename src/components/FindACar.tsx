@@ -3,7 +3,7 @@ import React from "react";
 
 export default function FindACar() {
   return (
-    <div className="flex flex-col font-Quicksand space-y-3 bg-white w-5/6 rounded-xl my-8 py-4">
+    <div className="flex flex-col font-Quicksand space-y-3 bg-white w-5/6 rounded-xl my-8 py-4 lg:w-3/6">
       <div className="flex justify-around p-4">
         <button
           type="button"

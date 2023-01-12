@@ -1,6 +1,6 @@
 import { Car } from "@prisma/client";
-import axios from "axios";
 import React, { useEffect, useState } from "react";
+import axiosInstance from "../utils/axiosInstance";
 import CardCar from "./CardCar";
 import FilterCars from "./FilterCars";
 
@@ -11,9 +11,7 @@ function CardList({}: Props) {
   const [selectedBrand, setSelectedBrand] = useState<string>("");
 
   const getAllCars = async () => {
-    const { data } = await axios.get(
-      `${process.env.NEXT_PUBLIC_SERVER_URL}/cars`
-    );
+    const { data } = await axiosInstance.get(`/cars`);
     setCars(data);
   };
 

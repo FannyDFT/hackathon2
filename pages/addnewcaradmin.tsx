@@ -1,5 +1,5 @@
-import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
+import axiosInstance from "../src/utils/axiosInstance";
 
 export default function AddNewCar() {
   const [carsData, setCarsData] = useState({
@@ -29,7 +29,7 @@ export default function AddNewCar() {
   ];
 
   const handleSubmit = () => {
-    axios.post("http://localhost:3000/api/cars", carsData);
+    axiosInstance.post("/cars", carsData);
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

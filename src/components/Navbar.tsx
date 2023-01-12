@@ -34,7 +34,6 @@ const Navbar: FC<Props> = () => {
         </Link>
       </div>
       {isMenuOpen && (
-
         <Menu
           className="bg-white text-lg text-blueColor font-bold p-8"
           width={200}
@@ -54,7 +53,7 @@ const Navbar: FC<Props> = () => {
             My account
           </Link>
           <Link
-            href="/cars/ours"
+            href="/ourcars"
             className="py-5"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -68,7 +67,6 @@ const Navbar: FC<Props> = () => {
             Help & Contact
           </Link>
         </Menu>
-
       )}
     </div>
   );

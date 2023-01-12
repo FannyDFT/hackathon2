@@ -12,13 +12,13 @@ function CardCar({ car }: Props) {
         <h2>
           {car.brand}
           <br />
-          or similar
+          {car.model}
         </h2>
         <p className="text-blueColor">{car.price} € /day</p>
       </div>
 
       <Link className="w-[200px] relative h-[150px]" href="/detailscars">
-        <Image fill src="/pictures/peugeot.png" alt="car" />
+        <Image fill src={car.avatarUrl} alt="car" />
       </Link>
     </div>
   );

@@ -10,3 +10,70 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model Car {
+  id           String        @id @default(uuid())
+  brand        String
+  model        String
+  avatarUrl    String
+  color        String
+  name         TypeName
+  fuel         String
+  clutch       TypeClutch
+  year         Int
+  plate        String
+  seats        Int
+  doors        Int
+  price        Int
+  kilometers   Int
+  isAvailable  Boolean?
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  reservations Reservation[]
+}
+
+model User {
+  id           String        @id @default(cuid())
+  email        String?       @unique
+  password     String
+  firstName    String?
+  lastName     String?
+  phone        String?
+  birthDate    String
+  cardNumber   Int
+  role         RoleName      @default(CLIENT)
+  licence      String
+  createdAt    DateTime      @default(now())
+  updatedAt    DateTime      @updatedAt
+  reservations Reservation[]
+}
+
+model Reservation {
+  id        String   @id @default(uuid())
+  carId     String
+  userId    String
+  startDate DateTime
+  endDate   DateTime
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  car       Car      @relation(fields: [carId], references: [id])
+  user      User     @relation(fields: [userId], references: [id])
+}
+
+enum TypeName {
+  SUV
+  COUPE
+  SEDAN
+  VAN
+  CONVERTIBLE
+  SUPER_CAR
+}
+
+enum TypeClutch {
+  MANUAL
+  AUTOMATIC
+}
+
+enum RoleName {
+  CLIENT
+  ADMIN
+}

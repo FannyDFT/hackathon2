@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { FC, useState } from "react";
 import { FaBars, FaUser } from "react-icons/fa";
 import Link from "next/link";
+import { slide as Menu } from "react-burger-menu";
 
 interface Props {}
 
@@ -33,13 +34,39 @@ const Navbar: FC<Props> = () => {
         </Link>
       </div>
       {isMenuOpen && (
-        <nav>
-          <Link href="/myAccount">Mon compte</Link>
-
-          <Link href="/ourCars">Nos modèles</Link>
-
-          <Link href="/contactHelp">Aide & Contact</Link>
-        </nav>
+        <Menu
+          className="bg-white text-lg text-blueColor font-bold p-8"
+          width={200}
+        >
+          <Link
+            href="/"
+            className="py-5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/logIn"
+            className="py-5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            My account
+          </Link>
+          <Link
+            href="/ourcars"
+            className="py-5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            Our cars
+          </Link>
+          <Link
+            href="/contactHelp"
+            className="py-5"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            Help & Contact
+          </Link>
+        </Menu>
       )}
     </div>
   );

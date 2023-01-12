@@ -7,9 +7,9 @@ type Props = {};
 
 function MiniCaroussel({}: Props) {
   return (
-    <div className=" flex flex-col items-center mt-12">
+    <div className=" flex flex-col items-center mt-12 bg-white w-full">
       <div>
-        <h1 className="font-Quicksand font-semibold text-lg mb-4">
+        <h1 className="font-Quicksand font-semibold text-lg my-4">
           Discover our vehicles
         </h1>
         <hr className="border-1 border-black" />

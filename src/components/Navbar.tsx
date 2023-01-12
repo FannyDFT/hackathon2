@@ -34,11 +34,11 @@ const Navbar: FC<Props> = () => {
       </div>
       {isMenuOpen && (
         <nav>
-          <Link href="/myAccount">Mon compte</Link>
+          <Link href="/myAccount">My account</Link>
 
-          <Link href="/ourCars">Nos modèles</Link>
+          <Link href="/cars/ours">Our cars</Link>
 
-          <Link href="/contactHelp">Aide & Contact</Link>
+          <Link href="/contactHelp">Help & Contact</Link>
         </nav>
       )}
     </div>

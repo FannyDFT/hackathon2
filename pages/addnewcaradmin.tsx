@@ -203,7 +203,6 @@ export default function AddNewCar() {
         <div className="mr-20">
           <label htmlFor="pics" className="flex flex-col mb-40 mt-5">
             <input
-              className="bg-blue-300"
               type="file"
               name="avatarUrl"
               value={carsData.avatarUrl}

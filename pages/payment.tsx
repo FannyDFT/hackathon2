@@ -54,7 +54,7 @@ function BookingForm({}: Props) {
 
             <p className="pText pb-4">
               Payment acount
-              <br />$ 171.00
+              <br /> 171.00 €
             </p>
           </div>
 

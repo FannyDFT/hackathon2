@@ -12,8 +12,8 @@ type Props = {
 function DetailsCars({ car }: Props) {
   return (
     <div className="h-screen bg-blueColor font-Quicksand">
-      <div className="flex justify-center items-center h-screen">
-        <div className="flex flex-col m-8 p-5 space-y-5 border rounded-xl bg-white h-5/6">
+      <div className="flex justify-center items-center h-screen pt-8">
+        <div className="flex flex-col m-8 p-5 space-y-5 border rounded-xl bg-white">
           <div className="flex justify-center"></div>
           <div className="flex flex-col">
             <div className="text-xl font-bold">{car.model}</div>
@@ -40,7 +40,7 @@ function DetailsCars({ car }: Props) {
           </ul>
           <div className="flex justify-between text-xl font-bold">
             <div>Total price:</div>
-            <div> {car.price} $</div>
+            <div> {car.price} €</div>
           </div>
           <div className="text-xs">payment details</div>
           <div className="flex justify-center">

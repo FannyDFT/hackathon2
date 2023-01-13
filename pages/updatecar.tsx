@@ -1,5 +1,5 @@
+import axios from "axios";
 import { ChangeEvent, useEffect, useState } from "react";
-import axiosInstance from "../src/utils/axiosInstance";
 
 export default function UpdateCar() {
   const [carsData, setCarsData] = useState({
@@ -18,10 +18,12 @@ export default function UpdateCar() {
     avatarUrl: "",
   });
 
-  const fakeCarId = "e746c74a-05da-47f2-a706-6e56cb60f78d";
+  const fakeCarId = "78468f2d-0640-453b-8380-f19535b6363a";
 
   const getOneCar = async () => {
-    const { data } = await axiosInstance.get(`/cars/${fakeCarId}`);
+    const { data } = await axios.get(
+      `http://localhost:3000/api/cars/${fakeCarId}`
+    );
     setCarsData(data);
   };
 
@@ -41,7 +43,7 @@ export default function UpdateCar() {
   };
 
   const handlDelete = () => {
-    axiosInstance.delete(`http://localhost:3000/api/cars/${fakeCarId}`);
+    axios.delete(`http://localhost:3000/api/cars/${fakeCarId}`);
   };
 
   return (
@@ -176,7 +178,7 @@ export default function UpdateCar() {
           <label htmlFor="pics" className="flex flex-col mb-40 mt-5">
             <input
               className="bg-blue-300"
-              type="file"
+              type="text"
               value={carsData.avatarUrl}
               onChange={handleChange}
             />

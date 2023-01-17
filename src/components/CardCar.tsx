@@ -1,24 +1,31 @@
-import { Car } from "@prisma/client";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
 
 type Props = { car: Car };
 
-function CardCar({ car }: Props) {
-  return (
-    <div className="flex justify-between items-center align-middle h-[182px] bg-white m-5 rounded-lg p-4 font-bold">
-      <div className="space-y-5">
-        <h2>
-          {car.brand} {car.model}
-          <br />
-          {car.model}
-        </h2>
-        <p className="text-blueColor">{car.price} € /day</p>
-      </div>
+interface IProps {
+  carBrand: string;
+  carModel: string;
+  price: number;
+  image: string;
+}
 
-      <Link className="w-[200px] relative h-[150px]" href={`/cars/${car.id}`}>
-        <Image fill src={car.avatarUrl} alt="car" />
+function CardCar({ carBrand, carModel, price, image }: IProps) {
+  return (
+    <div className="flex justify-start p-2 bg-white w-5/6 rounded-lg">
+      <Link href="/detailscars">
+        <div className="flex flex-col">
+          <div className="text-xl font-bold">
+            {carBrand} {carModel}
+          </div>
+          <div>or similar</div>
+          <div className="text-xl font-semibold">{price}€ / day </div>
+        </div>
+        <div className="flex">
+          {/* <Image src={image} alt="car" width={10} height={10} /> */}
+        </div>
       </Link>
     </div>
   );

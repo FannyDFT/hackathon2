@@ -1,7 +1,6 @@
-import CardCar from "../src/components/CardCar";
+import { Inter } from "@next/font/google";
 import FindACar from "../src/components/FindACar";
 import MiniCaroussel from "../src/components/MiniCaroussel";
-import { useAuth } from "../src/context/UserContext";
 
 export default function Home() {
   const { user } = useAuth();

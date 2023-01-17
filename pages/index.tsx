@@ -3,6 +3,8 @@ import FindACar from "../src/components/FindACar";
 import MiniCaroussel from "../src/components/MiniCaroussel";
 
 export default function Home() {
+  const { user } = useAuth();
+
   return (
     <div className="bg-blueColor flex flex-col items-center justify-center">
       <FindACar />

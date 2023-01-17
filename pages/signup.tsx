@@ -4,7 +4,7 @@ import React from "react";
 function signup() {
   return (
     <div className="h-screen bg-blueColor font-Quicksand flex flex-col items-center">
-      <div className="bg-white rounded-xl flex flex-col w-4/5 mt-14 pb-8">
+      <div className="bg-white rounded-xl flex flex-col w-4/5 mt-14 pb-8 lg:w-2/5">
         <div className="flex justify-center mt-16 pb-8 text-xl font-bold">
           Sign up
         </div>
